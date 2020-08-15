@@ -1,0 +1,210 @@
+*{  /*Adicionar para toda a página*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header div *{  /*Adicionar para todos os elementos de div dentro do header*/
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header h1{
+    display: inline;
+    color: #FFFFFF;
+    padding: 1.5em;
+}
+
+header{
+    background-color: #0F4C75;
+}
+
+#logos{
+    padding: 20px 20px 20px 0;
+}
+
+nav{
+    background-color: #3282B8;
+}
+
+nav ul{
+    display: block;
+    list-style: none;
+    margin: 0 30px;    
+}
+
+nav li{
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav li:hover{
+    background-color: #0F4C75;
+}
+
+main{
+    padding: 25px 100px;
+}
+
+section, section > article, aside{  /*Adicionar para toda sectio, os article da section e o aside*/
+    display: inline-block;
+}
+
+
+#principal{    
+    width: 65%;
+}
+
+#principal article, aside section{
+    border: 1px solid #3A3A3A;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 2em;
+    background-color: #f3f8fc9b;
+    box-shadow: 2px 2px 10px #7274759b;
+}
+
+aside{
+    margin-left: 40px;
+    width: 25%;
+    vertical-align: top;
+    text-align: center;
+}
+
+aside p:first-child{  /*Fazer a mudança apenas para o primeiro filho de aside*/
+    font-size: 30px;
+}
+
+#principal article p, aside section p{
+    color: #3A3A3A;
+}
+
+.botao{
+    padding: 5px;
+    font-size: 20px;
+    background-color: #EE7449;
+    color: #FFFFFF;
+}
+
+@media (min-width: 300px) and (max-width: 700px){  /*Media para Mobile*/
+    header div{
+        display: flex;
+        flex-direction: column-reverse; /*Reverter a forma com que aparecem*/
+        align-items: center;        
+    }
+
+    header div h1{
+        text-align: center;
+        padding: 0 20px 15px;
+    }
+
+    #logos{
+        flex-direction: row; /*Forçando as imagens a ficarem em linha*/
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        margin: 0 auto;
+    }
+
+    #principal{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #principal article{
+        align-items: center;
+    }
+
+    aside p:first-child{
+        width: 100%;
+        align-items: center;
+    }
+
+    aside{
+        display: flex;
+        flex-wrap: wrap; /*Colocando o aside para descer a linha*/
+        align-items: center;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 701px) and (max-width: 1024px){  /*Media para Tablet*/
+    header div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header div h1{
+        margin: 0;
+        padding: 20px 0 0;
+    }
+
+    #logos{
+        flex-direction: row;
+        padding: 0;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        margin: 0 auto;
+    }
+
+    #principal{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #principal article{
+        align-items: center;
+    }
+
+    nav ul{
+        text-align: center;
+    }
+
+    aside{
+        display: flex;
+        flex-wrap: wrap;  /*Colocando o aside para pular linha*/
+        align-items: stretch; /*Fazendo com que os "conteiner" cresçam igualmente*/
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    aside p:first-child{
+        width: 100%;
+        align-items: center;
+    }
+
+    aside section{
+        margin: 10px 5px;
+        width: 35%;
+    }
+
+}
+
+footer{
+    color: #FFFFFF;
+    background-color: #0F4C75;
+    text-align: right;
+    padding: 5px;
+}
